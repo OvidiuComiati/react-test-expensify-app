@@ -9,7 +9,7 @@ module.exports = (env) => {
     return {
         entry: './src/app.js',//where to start
         output: {
-            path: path.join(__dirname,'public'),
+            path: path.join(__dirname,'public','dist'),
             filename:'bundle.js'
         },
         module: {
@@ -51,7 +51,8 @@ module.exports = (env) => {
         // for better viewing of code problems in stack trace, exact file we wrote (not going in line 22222 on bundle js)
         devServer: {
             contentBase: path.join(__dirname,'public'),
-            historyApiFallback: true
+            historyApiFallback: true,
+            publicPath: '/dist/'
         }
     }
 }
