@@ -9,6 +9,7 @@ import { setTextFilter } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
+import './styles/styles.scss'
 
 const store = configureStore()
 
@@ -22,9 +23,9 @@ store.dispatch(addExpense({description: 'rent', amount: 123}))
 // },3000)
 
 const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
-console.log(visibleExpenses)
-console.log(store.getState())
+// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
+// console.log(visibleExpenses)
+// console.log(store.getState())
 
 const jsx = (
     <Provider store={store}>
